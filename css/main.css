@@ -242,6 +242,18 @@ body {
   background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
 }
 
+.header__login {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  padding: 17px 56px;
+  border-radius: 100px;
+  background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;

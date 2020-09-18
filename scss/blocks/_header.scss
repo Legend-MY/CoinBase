@@ -64,4 +64,15 @@
       background: $main-gradient;
     }
   }
+  &__login {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $secondary;
+    padding: 17px 56px;
+    border-radius: 100px;
+    background: $main-gradient;
+  }
 }
