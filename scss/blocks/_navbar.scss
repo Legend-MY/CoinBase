@@ -1,0 +1,36 @@
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    padding-bottom: 5px;
+    &:not(:first-child) {
+      margin-left: 70px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background-color: #fd749b;
+      margin: 0 auto;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+    &:hover {
+      &:after {
+        width: 70%;
+        opacity: 1;
+      }
+    }
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    color: $default;
+  }
+}

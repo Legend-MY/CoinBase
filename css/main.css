@@ -150,4 +150,141 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
+
+.container {
+  max-width: 1370px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.header__wrapper {
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  max-width: 145px;
+  overflow: hidden;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.header__dropdown {
+  position: relative;
+}
+
+.header__btn {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #333333;
+  background-color: transparent;
+  padding-right: 12px;
+  position: relative;
+}
+
+.header__btn:after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 6px;
+  background: url("../img/header/dropdown-arrow.png") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header__sell {
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, top 0.8s, visibility 0.5s;
+  transition: opacity 0.5s, top 0.8s, visibility 0.5s;
+}
+
+.header__sell_active {
+  top: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__item {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.header__item:hover {
+  color: #fff;
+  background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav__item {
+  padding-bottom: 5px;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 70px;
+}
+
+.nav__item:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #fd749b;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav__item:hover:after {
+  width: 70%;
+  opacity: 1;
+}
+
+.nav__link {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #333333;
+}
 /*# sourceMappingURL=main.css.map */
