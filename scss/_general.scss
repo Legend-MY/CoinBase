@@ -4,6 +4,45 @@ body {
   font-weight: 400;
 }
 .container {
-  max-width: 1370px;
+  max-width: 1390px;
+  padding: 0 10px;
   margin: 0 auto;
 }
+.wrapper {
+  transition: all 0.5s;
+  &_active {
+    transform: translateX(-32%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 150px) and (max-width: 575px) {
+    .wrapper {
+      &_active {
+        transform: translateX(-59%);
+      }
+    }
+ }

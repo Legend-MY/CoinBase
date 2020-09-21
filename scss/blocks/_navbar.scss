@@ -6,7 +6,7 @@
     flex-wrap: wrap;
   }
   &__item {
-    padding-bottom: 5px;
+    padding: 0 0 5px 0;
     &:not(:first-child) {
       margin-left: 70px;
     }
@@ -18,12 +18,14 @@
       background-color: #fd749b;
       margin: 0 auto;
       opacity: 0;
+      visibility: hidden;
       transition: all 0.5s;
     }
     &:hover {
       &:after {
         width: 70%;
         opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -33,4 +35,65 @@
     font-weight: 700;
     color: $default;
   }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    &__item {
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    position: fixed;
+    right: -33%;
+    top: 0%;
+    width: 33%;
+    height: 100%;
+    text-align: left;
+    background: $main-gradient;
+    margin: 55px 0;
+    transition: all 0.5s;
+    &_active {
+      right: 0;
+    }
+    &__list {
+      display: block;
+    }
+    &__item {
+      padding: 0;
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+      &:after {
+        content: '';
+        display: none;
+      }
+    }
+    &__link {
+      display: block;
+      font-size: 18px;
+      line-height: 21px;
+      color: $secondary;
+      padding: 10px 0 10px 25px;
+      &:hover {
+        color: $default;
+        background: $secondary;
+      }
+    }
+  }
+}
+
+@media (min-width: 150px) and (max-width: 575px) {
+ .nav {
+  right: -60%;
+  width: 60%;
+  &_active {
+    right: 0;
+  }
+ } 
 }
