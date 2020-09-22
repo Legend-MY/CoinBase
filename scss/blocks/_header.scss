@@ -77,39 +77,6 @@
       background: $main-gradient;
     }
   }
-  &__login {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    color: $secondary;
-    padding: 17px 56px;
-    border-radius: 100px;
-    background: $main-gradient;
-    position: relative;
-    transition: all 0.5s;
-    &:before {
-      content: '';
-      position: absolute;
-      top: -1px;
-      bottom: -1px;
-      left: -1px;
-      right: -1px;
-      background: $main-gradient;
-      border-radius: 100px;
-      z-index: -1;
-      opacity: 0;
-      transition: all 0.5s;
-    }
-    &:hover {
-      color: $default;
-      background: $secondary;
-      &:before {
-        opacity: 1;
-      }
-    }
-  }
 }
 
 @media (max-width: 992px) {
@@ -117,9 +84,6 @@
     padding: 10px 0;
     &__wrapper {
       height: 35px;
-    }
-    &__login {
-      padding: 10px 30px;
     }
     &__sell {
       &_active {
