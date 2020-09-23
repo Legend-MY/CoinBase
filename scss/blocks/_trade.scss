@@ -1,0 +1,101 @@
+.trade {
+  padding: 120px 0 0 0;
+  margin: 0 0 150px 0;
+  background: $main-gradient;
+  position: relative;
+  z-index: 0;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50%;
+    background: url('../img/hero/white-bg.png') no-repeat left bottom / cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &__row {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 75px;
+    background: $secondary;
+    text-align: center;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    margin: 0 0 60px 0;
+    &:after {
+      margin: 10px auto 0 auto;
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+  }
+  &__card {
+    position: relative;
+    flex-basis: 260px;
+    height: 226px;
+    padding: 60px;
+    border-radius: 15px;
+    background: $secondary;
+    cursor: pointer;
+    margin: 0 30px;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.3);
+      .trade__image, .trade__text {
+        transform: scale(1.1);
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      background: $main-gradient;
+      border-radius: 15px;
+      z-index: -1;
+    }
+  }
+  &__image {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 35px auto;
+    transition: all 0.3s;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $default;
+    transition: all 0.3s;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .trade {
+    &__cards {
+      margin: 0;
+    }
+    &__card {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .trade {
+    &__row {
+      padding: 30px;
+    }
+  }
+}
