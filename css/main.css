@@ -694,6 +694,10 @@ body {
   }
 }
 
+.welcome {
+  margin: 0 0 1px 0;
+}
+
 .welcome__row {
   display: -webkit-box;
   display: -ms-flexbox;
