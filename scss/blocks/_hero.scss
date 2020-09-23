@@ -102,13 +102,16 @@
     &__text, &__img {
       flex: 1 1 100%;
     }
+    &__text {
+      margin: 0 0 15px 0;
+    }
     &__img {
       display: none;
     }
   }
 }
 
-@media (min-width: 150px) and (max-width: 575px) {
+@media (min-width: 150px) and (max-width: 576px) {
   .hero {
     text-align: center;
     &__title {

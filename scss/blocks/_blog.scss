@@ -1,0 +1,218 @@
+.blog {
+  margin-bottom: 100px;
+  &__title {
+    text-align: center;
+    margin: 0 0 50px 0;
+    &:after {
+      margin: 0 auto;
+    }
+  }
+  &__subtitle {
+    font-size: 16px;
+    line-height: 40px;
+    color: $default;
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__card {
+    flex: 0 0 390px;
+    color: #888888;
+    border-radius: 15px;
+    border: 1px solid #888888;
+    background: $secondary;
+    cursor: pointer;
+    padding: 40px 60px;
+    transition: all 0.3s;
+    &_active {
+      max-width: 465px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      color: $default;
+      .blog__month {
+        border-right: 1px solid $default;
+      }
+      .blog__name {
+        font-size: 24px;
+        line-height: 39px;
+        background: $main-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .blog__text {
+        font-size: 12px;
+        line-height: 28px;
+      }
+      .blog__link {
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: 700;
+        background: $main-gradient;
+      }
+    }
+  }
+  &__card:nth-child(1) {
+    position: relative;
+    z-index: 1;
+    &:hover {
+      transform: translateX(-67%) scale(1.11);
+      .blog__date, .blog__text {
+        color: $default;
+      }
+      .blog__month {
+        border-right: 1px solid $default;
+      }
+      .blog__name {
+        background: $main-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .blog__link {
+        background: $main-gradient;
+      }
+    }
+  }
+  &__card:nth-child(2) {
+    z-index: 2;
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.11);
+    }
+  }
+  &__card:nth-child(3) {
+    position: relative;
+    z-index: 1;
+    &:hover {
+      transform: translateX(67%) scale(1.11);
+      .blog__date, .blog__text {
+        color: $default;
+      }
+      .blog__month {
+        border-right: 1px solid $default;
+      }
+      .blog__name {
+        background: $main-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .blog__link {
+        background: $main-gradient;
+      }
+    }
+  }
+  &__date {
+    display: flex;
+    font-size: 10px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+  }
+  &__month {
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+    border-right: 1px solid #888888;
+  }
+  &__name {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    font-size: 10px;
+    line-height: 18px;
+    margin: 0 0 10px 0;
+  }
+  &__link {
+    display: inline-block;
+    font-size: 9px;
+    line-height: 13px;
+    font-weight: 700;
+    color: $secondary;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 11px 22px;
+    border-radius: 100px;
+    background: #888888;
+  }
+}
+
+@media (max-width: 992px) {
+  .blog {
+    &__row {
+      justify-content: center;
+      margin: 0 -10px;
+    }
+    &__card {
+      margin: 0 10px;
+      margin-bottom: 20px;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0) scale(1);
+      &:hover {
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+          transform: none;
+        }
+      }
+    }
+    &__date, &__text {
+      color: $default;
+    }
+    &__month {
+      border-right: 1px solid $default;
+    }
+    &__name {
+      font-size: 24px;
+      line-height: 39px;
+      background: $main-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__text {
+      font-size: 12px;
+      line-height: 28px;
+    }
+    &__link {
+      font-size: 11px;
+      line-height: 16px;
+      font-weight: 700;
+      background: $main-gradient;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .blog {
+    &__title, &__subtitle {
+      margin: 0 0 10px 0;
+    }
+    &__card {
+      flex: 0 0 260px;
+      padding: 20px 40px;
+      &_active {
+        .blog__name {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        .blog__text {
+          line-height: 18px;
+        }
+      }
+    }
+    &__name {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__text {
+      line-height: 18px;
+    }
+  }
+}
