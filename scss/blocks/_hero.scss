@@ -1,6 +1,5 @@
 .hero {
   padding: 60px 0 0 0;
-  margin: 95px 0 0 0;
   background: $main-gradient;
   position: relative;
   &:after {
@@ -71,7 +70,6 @@
 
 @media (max-width: 992px) {
   .hero {
-    margin: 40px 0 0 0;
     &:after {
       content: '';
       height: 110px;

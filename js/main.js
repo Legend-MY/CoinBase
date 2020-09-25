@@ -13,3 +13,13 @@ menuBurger.onclick = function () {
   navBar.classList.toggle('nav_active');
   wrapper.classList.toggle('wrapper_active');
 }
+
+
+
+// Header change background while scrolling
+$(window).scroll(function () {
+  if (this.scrollY > 20)
+    $('header').addClass('sticky');
+  else
+    $('header').removeClass('sticky');
+});

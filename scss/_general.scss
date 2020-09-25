@@ -4,6 +4,7 @@ body {
   font-weight: 400;
 }
 .wrapper {
+  margin: 95px 0 0 0;
   transition: all 0.5s;
   &_active {
     transform: translateX(-32%);
@@ -79,6 +80,9 @@ body {
 @media (max-width: 992px) {
   .container {
     max-width: 960px;
+  }
+  .wrapper {
+    margin: 40px 0 0 0;
   }
   .button {
     padding: 10px 30px;

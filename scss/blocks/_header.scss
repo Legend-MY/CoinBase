@@ -5,6 +5,7 @@
   width: 100%;
   background: $secondary;
   padding: 20px 0;
+  transition: all 0.5s;
   z-index: 999;
   &__wrapper {
     height: 55px;
@@ -76,6 +77,14 @@
       color: $secondary;
       background: $main-gradient;
     }
+  }
+}
+
+.sticky {
+  background: rgba(238, 243, 236, 1);
+  padding: 5px;
+  .header__login {
+    padding: 10px 30px;
   }
 }
 

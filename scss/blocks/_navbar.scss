@@ -6,7 +6,6 @@
     flex-wrap: wrap;
   }
   &__item {
-    padding: 0 0 5px 0;
     &:not(:first-child) {
       margin-left: 70px;
     }
@@ -22,6 +21,13 @@
       transition: all 0.5s;
     }
     &:hover {
+      &:after {
+        width: 70%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &_active {
       &:after {
         width: 70%;
         opacity: 1;
