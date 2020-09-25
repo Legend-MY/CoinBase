@@ -1,4 +1,5 @@
 .download {
+  position: relative;
   &__row {
     display: flex;
     flex-direction: column;
@@ -23,6 +24,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__link {
+    &:not(:last-child) {
+      margin: 0 10px 0 0;
+    }
   }
 }
 

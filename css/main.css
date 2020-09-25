@@ -1584,6 +1584,10 @@ body {
   }
 }
 
+.download {
+  position: relative;
+}
+
 .download__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1629,6 +1633,10 @@ body {
           align-items: center;
 }
 
+.download__link:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
 @media (max-width: 576px) {
   .download__title {
     margin: 0 0 20px 0;
@@ -1636,6 +1644,78 @@ body {
   .download__subtitle {
     margin: 0 0 20px 0;
     line-height: 21px;
+  }
+}
+
+.mobile {
+  position: relative;
+  background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+}
+
+.mobile:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 195px;
+  background: url("../img/hero/white-bg.png") no-repeat left top/cover;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.mobile:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 20%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.mobile__buble {
+  position: absolute;
+  left: 10%;
+  bottom: 40%;
+}
+
+.mobile__row {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 -10px;
+}
+
+.mobile__phone {
+  position: relative;
+  margin: 20px 10px 0 10px;
+  z-index: 2;
+}
+
+.mobile__phone img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mobile__buble {
+    display: none;
+  }
+  .mobile__phone {
+    width: 190px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile__phone {
+    width: 140px;
   }
 }
 /*# sourceMappingURL=main.css.map */
